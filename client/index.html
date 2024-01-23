@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3d Tetris | Multiplayer Game</title>
+
+  <meta name="title" content="3d Tetris | Multiplayer Game" />
+  <meta name="description" content="3d Tetris | Multiplayer Game - Play with your friends" />
+  <meta name="keywords" content="3d Tetris, Multiplayer Game, Play with your friends" />
+
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="relative h-screen bg-zinc-800 text-white flex items-center justify-center overflow-hidden">
+  <div class="flex gap-2" style="display: none;" id="game">
+    <canvas id="canvas" class="w-[400px] bg-zinc-900 h-[600px] rounded-md shadow-md shadow-zinc-950/10"></canvas>
+    <div class="w-[250px] bg-zinc-900/70 rounded-md p-5">
+      <div class="flex flex-col justify-between h-full" style="display: none;" id="stats">
+        <div>
+          <h1
+            class="text-5xl uppercase font-extrabold text-transparent text-center bg-gradient-to-r from-sky-600 to-pink-600 bg-clip-text">
+            3D TETRIS
+          </h1>
+          <h2 id="nextText" class="text-zinc-100 text-xl mt-4 font-semibold">
+            Next
+          </h2>
+          <div class="flex items-center justify-center p-2 border mt-0.5 bg-zinc-800/20 rounded-md"
+            id="nextTetrominoWrapper">
+            <div id="nextTetromino" class="grid gap-1">
+            </div>
+          </div>
+          <h2 id="player1" class="text-sky-100 text-sm mt-2 font-semibold">
+            Player 1
+          </h2>
+          <div id="score1"
+            class="bg-sky-600/20 shadow-sm shadow-sky-600 p-1 rounded-md border border-sky-600 text-xs text-sky-200">
+            10
+          </div>
+          <h2 id="player2" class="text-blue-100 text-sm mt-1 font-semibold">
+            Player 2 (You)
+          </h2>
+          <div id="score2"
+            class="bg-yellow-600/20 shadow-sm shadow-yellow-600 p-1 rounded-md border border-yellow-600 text-xs text-blue-200">
+            10
+          </div>
+          <h2 id="player3" class="text-purple-100 text-sm mt-1 font-semibold">
+            Player 3
+          </h2>
+          <div id="score3"
+            class="bg-red-600/20 shadow-sm shadow-red-600 p-1 rounded-md border border-red-600 text-xs text-purple-200">
+            10
+          </div>
+          <h2 id="player4" class="text-pink-100 text-sm mt-1 font-semibold">
+            Player 4
+          </h2>
+          <div id="score4"
+            class="bg-pink-600/20 shadow-sm shadow-pink-600 p-1 rounded-md border border-pink-600 text-xs text-pink-200">
+            10
+          </div>
+
+          <div id="yourTurn"
+            class="bg-gradient-to-r uppercase font-semibold from-sky-600 to-pink-600 text-center text-xs text-zinc-100 rounded-md p-1 mt-2">
+            It's your turn
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 rounded-md">
+          <button id="start"
+            class="w-full font-bold bg-zinc-950 hover:bg-zinc-900 transition-all duration-300 text-zinc-200 rounded-md py-2"
+            onclick="window.location.reload()">
+            New Game
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="loadingText"
+    class="text-center text-2xl font-bold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">Loading...</h2>
+
+  <!-- Modal HTML -->
+  <div id="modal" class="fixed inset-0 bg-zinc-900/80 flex items-center justify-center" style="display: none;">
+    <div class="animated-border p-0.5 rounded-md">
+      <div class="bg-zinc-800 rounded-md px-6 py-8 flex flex-col justify-center w-[532px] min-h-40">
+        <h1 id="modalTitle"
+          class="text-6xl uppercase font-extrabold text-transparent mb-2 text-center bg-gradient-to-r from-sky-600 to-pink-600 bg-clip-text">
+        </h1>
+        <h2 id="modalMessage" class="text-zinc-100 text-lg text-center">
+        </h2>
+        <div class="flex justify-center items-center">
+          <button id="modalBtn"
+            class="w-fit px-10 font-bold mt-6 bg-zinc-600 uppercase hover:brightness-125 transition-all duration-300 text-zinc-200 rounded-md py-2">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

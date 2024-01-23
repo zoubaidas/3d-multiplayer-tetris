@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animated-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-border::before {
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(transparent, transparent, #0285c773, #db277873, transparent, transparent);
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
