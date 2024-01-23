@@ -81,10 +81,6 @@ Learn more about this working (Tutorials) [here](https://socket.io/docs/v4/tutor
 
 
 
-## Demo Video
-Watch the video to get more understanding of the code and the game. You can get the video in the same folder as the readme file.
-
-
 ## Project Structure
 
 The project is organized into two main directories: `client` and `server`.
