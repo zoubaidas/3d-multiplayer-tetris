@@ -1,7 +1,6 @@
 # 3D Multiplayer Tetris Game
 
-## Introduction
-A 3D multiplayer Tetris game is designed for playing Tetris with friends. It presents a three-dimensional twist on the classic Tetris experience, offering a multiplayer feature for gaming with friends. This turn-based game allows interaction with others, accommodating 2, 3, or 4 players simultaneously.
+
 ![screenshot](/screenshot.png)
 
 ## Features
