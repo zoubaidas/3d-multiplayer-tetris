@@ -122,6 +122,3 @@ The project is organized into two main directories: `client` and `server`.
 - [postcss](https://www.npmjs.com/package/postcss): Library for CSS transformations.
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): Library for automatically adding vendor prefixes to CSS.
 
-## Conclusion
-
-This project was a great learning experience for me. I learned a lot about 3D rendering, multiplayer games, and Socket io. I also learned a lot about CSS and animations. I hope you enjoy playing the game as much as I enjoyed making it.
